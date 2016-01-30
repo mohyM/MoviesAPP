@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+<ScrollView
+android:layout_width="match_parent"
+android:layout_height="0dp"
+    android:layout_weight="1">
+<LinearLayout
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="100">
+
+    <ImageView
+
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:id="@+id/image1"
+        android:src="@drawable/play1"
+        android:paddingTop="10dp"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/movietitle"
+        android:text="Title"
+        android:textSize="25dp"
+        android:padding="5dp"
+        android:textColor="#000000"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn1"
+        android:text="title"
+        android:textSize="15dp"
+        android:paddingBottom="5dp"
+        android:layout_gravity="center"
+        android:textColor="#998100"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ormovietitle"
+        android:text="Original Title"
+        android:textSize="25dp"
+        android:padding="5dp"
+        android:textColor="#000000"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/originaltitle"
+        android:text="original_title"
+        android:textSize="15dp"
+        android:paddingBottom="5dp"
+        android:layout_gravity="center"
+        android:textColor="#998100"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/orlanguage"
+        android:text="Original Language"
+        android:textSize="25dp"
+        android:padding="5dp"
+        android:textColor="#000000"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/original_language"
+        android:text="original_language"
+        android:textSize="15dp"
+        android:padding="5dp"
+        android:layout_gravity="center"
+        android:textColor="#998100"/>
+    <RatingBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numStars="5"
+        android:id="@+id/rating1"
+        android:layout_gravity="center"
+        android:paddingBottom="5dp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/over"
+        android:text="OverView"
+        android:textSize="25dp"
+        android:padding="5dp"
+        android:textColor="#000000"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/overview"
+        android:text="overview"
+        android:textSize="15dp"
+        android:paddingBottom="5dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textColor="#998100"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/pop"
+        android:text="Popularity"
+        android:textSize="25dp"
+        android:padding="5dp"
+        android:textColor="#000000"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/popularity"
+        android:text="popularity"
+        android:textSize="15dp"
+        android:paddingBottom="5dp"
+        android:layout_gravity="center"
+        android:textColor="#998100"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Date"
+        android:text="Release Date"
+        android:textSize="25dp"
+        android:padding="5dp"
+        android:textColor="#000000"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/release_date"
+        android:text="release_date"
+        android:textSize="15dp"
+        android:paddingBottom="5dp"
+        android:layout_gravity="center"
+        android:textColor="#998100"/>
+
+</LinearLayout>
+</ScrollView>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="0dp"
+android:layout_weight="1">
+<android.support.v7.widget.RecyclerView
+    android:id="@+id/list2"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" />
+</LinearLayout>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="0dp"
+android:layout_weight="1">
+<ListView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/list3"></ListView>
+</LinearLayout>
+    </LinearLayout>

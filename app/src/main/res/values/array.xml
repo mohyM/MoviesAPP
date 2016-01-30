@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="list1">
+        <item>most_popular</item>
+        <item>highest_rated</item>
+        <item>favourie</item>
+        </string-array>
+    <string-array name="list2">
+        <item>most_popular</item>
+        <item>highest_rated</item>
+        <item>favourie</item>
+    </string-array>
+    </resources>

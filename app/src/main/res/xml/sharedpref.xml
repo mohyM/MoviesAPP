@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+<PreferenceCategory
+    android:title="Choose Sort Method"
+    android:summary="choose poularity or favourie">
+    <ListPreference
+        android:title="Sort Method"
+        android:summary="choose sort method"
+        android:key="sorting"
+        android:entries="@array/list1"
+        android:entryValues="@array/list2"
+        android:defaultValue="most_popular" />
+</PreferenceCategory>
+</PreferenceScreen>

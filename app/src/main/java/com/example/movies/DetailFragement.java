@@ -117,20 +117,22 @@ public class DetailFragement extends Fragment implements View.OnClickListener,As
 
         root=inflater.inflate(R.layout.fragement_detail, container, false);
         initialize(root);
-
-        md=new MovieData(getActivity().getApplicationContext());
+       md=new MovieData(getActivity().getApplicationContext());
         if(MainActivity.twopane) {
             Bundle x = this.getArguments();
-            title = x.getString("title");
-            originalt = x.getString("originaltitle");
-            originall = x.getString("originallanguage");
-            story = x.getString("overview");
-            pop = x.getFloat("popularity");
-            dt = x.getString("date");
-            rating = x.getFloat("rating");
-            path = x.getString("path");
-            id = x.getInt("movie_id");
-            state = x.getInt("state");
+            if(x!=null) {
+                title = x.getString("title");
+                originalt = x.getString("originaltitle");
+                originall = x.getString("originallanguage");
+                story = x.getString("overview");
+                pop = x.getFloat("popularity");
+                dt = x.getString("date");
+                rating = x.getFloat("rating");
+                path = x.getString("path");
+                id = x.getInt("movie_id");
+                state = x.getInt("state");
+
+            }
         }
         else
         {
@@ -147,6 +149,7 @@ public class DetailFragement extends Fragment implements View.OnClickListener,As
             state = x.getInt("state");
 
             }
+
         if(state==1 || state==2) {
             tv1.setText(title);
             tv2.setText(originalt);

@@ -23,6 +23,11 @@ public class MainActivity extends AppCompatActivity implements OnVersionNameSele
         if(findViewById(R.id.fragment_container)!=null)
         {
             twopane=true;
+
+            if(savedInstanceState==null)
+            {
+                    getFragmentManager().beginTransaction().replace(R.id.fragment_container,new DetailFragement()).commit();
+            }
         }
 
 
@@ -80,7 +85,6 @@ public class MainActivity extends AppCompatActivity implements OnVersionNameSele
             // Replace whatever is in the fragment_container view with this fragment,
             // and add the transaction to the backStack so the User can navigate back
             fragmentTransaction.replace(R.id.fragment_container, d);
-            fragmentTransaction.addToBackStack(null);
             fragmentTransaction.commit();
 
 
@@ -102,3 +106,5 @@ public class MainActivity extends AppCompatActivity implements OnVersionNameSele
         }
     }
 }
+
+      

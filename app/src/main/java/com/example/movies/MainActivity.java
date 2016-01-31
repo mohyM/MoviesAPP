@@ -106,5 +106,3 @@ public class MainActivity extends AppCompatActivity implements OnVersionNameSele
         }
     }
 }
-
-      

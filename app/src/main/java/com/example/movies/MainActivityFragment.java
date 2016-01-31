@@ -19,6 +19,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.GridView;
 import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import com.example.model.MovieModel;
@@ -53,6 +54,7 @@ public class MainActivityFragment extends Fragment implements AdapterView.OnItem
 
     List<String>movieModelListfavourite;
     String var="http://image.tmdb.org/t/p/w185/";
+    int mposition= GridView.INVALID_POSITION;;
     public MainActivityFragment() {
 
     }
@@ -103,6 +105,18 @@ public class MainActivityFragment extends Fragment implements AdapterView.OnItem
         }
 
     }
+
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        if(mposition!=GridView.INVALID_POSITION)
+        {
+            outState.putInt("key",mposition);
+        }
+        super.onSaveInstanceState(outState);
+
+
+    }
+
     public void updateData()
     {
         SharedPreferences pref= PreferenceManager.getDefaultSharedPreferences(getActivity());
@@ -123,11 +137,15 @@ public class MainActivityFragment extends Fragment implements AdapterView.OnItem
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+                                 Bundle savedInstanceState) {
 
         View root=inflater.inflate(R.layout.fragment_main, container, false);
          l=(GridView)root.findViewById(R.id.list1);
         l.setOnItemClickListener(this);
+        if(savedInstanceState!=null && savedInstanceState.containsKey("key"))
+        {
+            mposition=savedInstanceState.getInt("key");
+        }
         return root;
     }
 
@@ -153,6 +171,7 @@ public class MainActivityFragment extends Fragment implements AdapterView.OnItem
                     favourite.get(position).getVote_average(), favourite.get(position).getPoster_path(),favourite.get(position).getId());
 
         }
+        mposition=position;
     }
     public void getMovieData()
     {
@@ -305,5 +324,7 @@ public class MainActivityFragment extends Fragment implements AdapterView.OnItem
 
         }
     }
+
+
 
 }
